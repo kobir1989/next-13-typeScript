@@ -1,84 +1,72 @@
 export const typography = {
 	fontFamily: `Roboto, sans-serif`,
 	h1: {
-		fontSize: '3.75rem', // 60px
-		lineHeight: '4.6875rem', // 75px
+		fontSize: '2.5rem',
+		lineHeight: '2.8rem',
 		fontWeight: '700',
-		'@media (max-width: 992px)': {
-			fontSize: '2.75rem', // 32px
-			lineHeight: '3.75rem', // 60px
+		color: '#212121',
+		'@media (max-width: 1024px)': {
+			fontSize: '2rem',
+			lineHeight: '2.2rem',
 		},
 		'@media (max-width: 600px)': {
-			fontSize: '2rem', // 32px
-			lineHeight: '2.625rem', // 42px
+			fontSize: '1.5rem',
+			lineHeight: '1.625rem',
 		},
 	},
 	h2: {
-		fontSize: '3.375rem', // 54px
-		lineHeight: '4rem', // 64px
+		fontSize: '2rem',
+		lineHeight: '2.2rem',
 		fontWeight: '700',
-
+		color: '#212121',
 		'@media (max-width: 600px)': {
-			fontSize: '1.875rem', // 30px
-			lineHeight: '2.375rem', // 38px
+			fontSize: '1.475rem',
+			lineHeight: '2rem',
 		},
 	},
 	h3: {
-		fontSize: '2.25rem', // 36px
-		lineHeight: '3.125rem', // 50px
+		fontSize: '1.8rem',
+		lineHeight: '2.125rem',
 		fontWeight: '700',
-
+		color: '#212121',
 		'@media (max-width: 600px)': {
-			fontSize: '1.625rem', // 26px
-			lineHeight: '2.375rem', // 38px
+			fontSize: '1.225rem',
+			lineHeight: '2.375rem',
 		},
 	},
 	h4: {
-		fontSize: '1.75rem', // 28px
-		lineHeight: '2.375rem', // 38px
-		fontWeight: '500',
-
+		fontSize: '1.1rem',
+		lineHeight: '1.8rem',
+		fontWeight: '600',
+		letterSpacing: '0.3px',
+		color: '#212121',
 		'@media (max-width: 600px)': {
-			fontSize: '1.25rem', // 20px
-			lineHeight: '1.75rem', // 28px
-		},
-	},
-	h5: {
-		fontSize: '1.25rem', // 20px
-		lineHeight: '1.625rem', // 26px
-		letterSpacing: '0.2px',
-		fontWeight: '500',
-
-		'@media (max-width: 600px)': {
-			fontSize: '1.1875rem', // 19px
-			lineHeight: '1.5rem', // 24px
-			letterSpacing: '-0.1px',
-		},
-	},
-	h6: {
-		fontSize: '1.125rem', // 18px
-		lineHeight: '1.5rem', // 24px
-		letterSpacing: '0.2px',
-		fontWeight: '500',
-
-		'@media (max-width: 600px)': {
-			letterSpacing: '0.1px',
+			fontSize: '0.9rem',
+			lineHeight: '1.375rem',
 		},
 	},
 	subtitle1: {
-		fontSize: '.875rem', // 14px
-		lineHeight: '1.125rem', // 18px
+		fontSize: '1.1rem',
+		lineHeight: '1.325rem',
 		fontWeight: '500',
 	},
 	subtitle2: {
-		fontSize: '.8125rem', // 13px
-		lineHeight: '1.0625rem', // 17px
+		fontSize: '.8125rem',
+		lineHeight: '1.0625rem',
 		fontWeight: '700',
 	},
 	body1: {
-		fontSize: '1rem', // 16px
-		lineHeight: '1.4375rem', // 23px
+		fontSize: '1rem',
+		lineHeight: '1.4375rem',
 		letterSpacing: '0.1px',
 		fontWeight: '400',
+		color: '#757575',
+	},
+	body2: {
+		fontSize: '0.7rem',
+		lineHeight: '1.4375rem',
+		letterSpacing: '0.1px',
+		fontWeight: '300',
+		color: '#bdbdbd',
 	},
 };

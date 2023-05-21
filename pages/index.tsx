@@ -1,4 +1,6 @@
 import Button from '@/components/Atoms/Button/Button';
+import Icon from '@/components/Atoms/Icons/Icon';
+import Card from '@/components/molicules/Card/Card';
 import Head from 'next/head';
 
 export default function Home() {
@@ -10,9 +12,7 @@ export default function Home() {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main>
-				<h1>Hello theree</h1>
-			</main>
+			<main></main>
 		</>
 	);
 }
