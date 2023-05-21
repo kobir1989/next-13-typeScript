@@ -1,7 +1,7 @@
-import Note from '../../../../database/model/notes.model';
-import connectMongoDb from '../../../../database/db';
+import Note from '../../../database/model/notes.model';
+import connectMongoDb from '../../../database/db';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { errorResponse, ErrorResponseType } from '../../../helper/errorResponse';
+import { errorResponse, ErrorResponseType } from '../../../src/helper/errorResponse';
 
 type Data = {
 	title: string;

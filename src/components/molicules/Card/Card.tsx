@@ -8,30 +8,39 @@ type CardProps = {
 	date: string;
 	isCompleted: boolean;
 	isImportant: boolean;
+	updateChecked: (id: string) => void;
+	id: string;
+	updateToImportant: (id: string) => void;
 };
 
-const Card = ({ title, description, date, isCompleted, isImportant }: CardProps) => {
+const Card = ({ title, updateToImportant, description, date, isCompleted, isImportant, updateChecked, id }: CardProps) => {
+	const formattedDate = new Date(date).toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	});
+
 	return (
 		<Box p={3} bgcolor='#FFF' borderRadius='1rem' width='100%'>
 			<Stack direction='row' justifyContent='space-between' mb={2}>
-				<Typography variant='body2'>{date}</Typography>
+				<Typography variant='body2'>{formattedDate}</Typography>
 				<IconButton disableRipple sx={{ p: 0 }}>
 					<Icon name='moreIcon' />
 				</IconButton>
 			</Stack>
 			<Stack gap={2}>
-				<Stack direction='row' justifyContent='space-between'>
-					<Box display='flex' gap={1}>
-						<IconButton disableRipple sx={{ p: 0 }}>
-							<Icon name={isCompleted ? 'radioChecked' : 'radioUnchecked'} />
-						</IconButton>
-						<Typography variant='h4'>{title}</Typography>
-					</Box>
-					<IconButton disableRipple sx={{ p: 0 }}>
-						<Icon name={isImportant ? 'starFilled' : 'starOutlined'} />
-					</IconButton>
-				</Stack>
-				<Typography variant='body1'>{description}</Typography>
+				<Typography variant='h4'>{title}</Typography>
+				<Typography variant='body1' display={'block'}>
+					{description}
+				</Typography>
+			</Stack>
+			<Stack direction='row' justifyContent='space-between' mt={2}>
+				<IconButton disableRipple sx={{ p: 0 }} onClick={() => updateChecked(id)}>
+					<Icon name={isCompleted ? 'radioChecked' : 'radioUnchecked'} color='success' />
+				</IconButton>
+				<IconButton disableRipple sx={{ p: 0 }} onClick={() => updateToImportant(id)}>
+					<Icon name={isImportant ? 'starFilled' : 'starOutlined'} color='warning' />
+				</IconButton>
 			</Stack>
 		</Box>
 	);

@@ -7,6 +7,7 @@ type ButtonProps = {
 	variant?: 'contained' | 'outlined';
 	size?: 'small' | 'medium' | 'large';
 	color?: 'primary' | 'secondary' | 'error' | 'warning' | 'success';
+	type?: 'submit';
 };
 
 const CustomButton = styled(MUIButton)(({ theme }) => ({
@@ -27,10 +28,10 @@ const CustomButton = styled(MUIButton)(({ theme }) => ({
 			fontSize: '0.9rem',
 		},
 		'&.MuiButton-containedSizeLarge': {
-			padding: '0.3rem 1.2rem',
+			padding: '0.5rem 1.2rem',
 			fontWeight: 400,
 			fontSize: '0.9rem',
-			minWidth: '6rem',
+			minWidth: '8rem',
 		},
 	},
 
