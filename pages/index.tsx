@@ -1,3 +1,4 @@
+import Button from '@/components/Atoms/Button/Button';
 import Head from 'next/head';
 
 export default function Home() {
