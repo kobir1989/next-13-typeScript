@@ -22,10 +22,6 @@ const notesSchema = new Schema(
 			trim: true,
 			required: true,
 		},
-		user: {
-			type: Schema.Types.ObjectId,
-			ref: 'User',
-		},
 		isImportant: {
 			type: Boolean,
 			default: false,
